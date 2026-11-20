@@ -1,0 +1,23 @@
+{
+  "kit": "0.1.4",
+  "format": 1,
+  "timeoutWarnFraction": 0.6,
+  "maxMutants": 1000,
+  "runtimePython": "cpython-3.12.15-linux-x86_64-gnu",
+  "lanes": {
+    "prometheus": {
+      "verifierTimeoutSec": 5400,
+      "cpus": 8,
+      "memoryMb": 16384,
+      "minMutants": 20,
+      "warnBelowMutants": 0
+    },
+    "titan": {
+      "verifierTimeoutSec": 3600,
+      "cpus": 4,
+      "memoryMb": 8192,
+      "minMutants": 50,
+      "warnBelowMutants": 60
+    }
+  }
+}

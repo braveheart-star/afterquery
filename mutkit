@@ -1,0 +1,5 @@
+#!/bin/sh
+# mutkit: the mutation-task build kit. Needs Node.js 20 or newer and Docker.
+DIR="$(cd "$(dirname "$0")" && pwd)"
+command -v node >/dev/null 2>&1 || { echo "mutkit needs Node.js 20 or newer on PATH"; exit 1; }
+exec node "$DIR/lib/mutkit.mjs" "$@"
